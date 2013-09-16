@@ -1,4 +1,4 @@
-# bediener [![Build Status](https://secure.travis-ci.org/cioddi/node-bediener.png?branch=master)](http://travis-ci.org/cioddi/node-bediener)
+# bediener
 
 static http server with current directory as document root
 
