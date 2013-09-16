@@ -1,0 +1,44 @@
+{
+  "name": "bediener",
+  "description": "static http server with current directory as document root",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cioddi/node-bediener",
+  "author": {
+    "name": "Max Tobias Weber",
+    "email": "maxtobiasweber@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cioddi/node-bediener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cioddi/node-bediener/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/cioddi/node-bediener/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/bediener",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
+    "connect":"*"
+  },
+  "keywords": [],
+  "preferGlobal": "true",
+  "bin": {
+    "bediener" : "lib/bediener.js"
+  }
+}
