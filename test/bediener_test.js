@@ -1,36 +1,27 @@
 'use strict';
 
-var bediener = require('../lib/bediener.js');
+var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
+var bediener = spawn('./lib/bediener.js');
 
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
+// console.log(bediener);
 
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
-
-exports['awesome'] = {
+exports['bediener'] = {
   setUp: function(done) {
-    // setup here
-    done();
+    bediener.stdout.on('data', function (data) {
+      // console.log(data);
+      done();
+    });
   },
   'no args': function(test) {
     test.expect(1);
-    // tests here
-    test.equal(bediener.awesome(), 'awesome', 'should be awesome.');
-    test.done();
+    setTimeout(function(){
+      exec('curl http://localhost:9999/test/testtext.txt',function(err,stdout,stderr){
+
+        test.equal(stdout, 'text123', 'should be "text123".');
+        // bediener.close();
+        test.done();
+      });
+    },5000);
   },
 };

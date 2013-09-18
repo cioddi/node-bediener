@@ -13,7 +13,7 @@ run in terminal to have the current directory served
 port parameter is optional
 
 ```
-bediener [port]
+bediener [-p port]
 ```
 
 

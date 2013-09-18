@@ -1,7 +1,7 @@
 {
   "name": "bediener",
   "description": "static http server with current directory as document root",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/cioddi/node-bediener",
   "author": {
     "name": "Max Tobias Weber",
@@ -34,7 +34,8 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "connect":"*"
+    "connect":"*",
+    "cliargs":"*"
   },
   "keywords": [],
   "preferGlobal": "true",
