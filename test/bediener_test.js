@@ -13,7 +13,7 @@ exports['bediener'] = {
   },
   'no args': function(test) {
     test.expect(1);
-      exec('curl http://localhost:6000/test/testtext.txt',function(err,stdout,stderr){
+      exec('curl http://127.0.0.1:6000/test/testtext.txt',function(err,stdout,stderr){
         console.log(stderr);
         console.log(err);
         console.log(stdout);
