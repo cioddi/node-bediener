@@ -1,6 +1,11 @@
 'use strict';
+var exec = require('child_process').exec;
 
 module.exports = function(grunt) {
+
+  if(grunt.cli[1] === 'nodeunit'){
+    exec('./lib/bediener.js -p 6000',function(){});  
+  }
 
   // Project configuration.
   grunt.initConfig({
@@ -44,5 +49,4 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit']);
-
 };
