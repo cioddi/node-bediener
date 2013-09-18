@@ -3,7 +3,7 @@ var exec = require('child_process').exec;
 
 module.exports = function(grunt) {
 
-  if(grunt.cli[1] === 'nodeunit'){
+  if(grunt.cli.tasks[0] === 'nodeunit'){
     exec('./lib/bediener.js -p 6000',function(){});  
   }
 
