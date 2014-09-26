@@ -1,5 +1,12 @@
 language: node_js
-node_js:
-  - 0.10
-before_script:
-  - npm install -g grunt-cli
+node_js: 
+- 0.1
+before_script: 
+- npm install -g grunt-cli
+deploy: 
+  provider: npm
+  email: maxtobiasweber@gmail.com
+  api_key: 
+    secure: ChMtxRqePpDrmD9Zvif4UtJ5bxYawA9Pez9Cna5IwF1w52+WeWQ9NBhwRmPlRUn6K6zG3N9k7qWCyU9kenA4ACCc7Z+NRZ8o1GNAeOilQGIcQdaATW/oAlF5aJrX6OV4sF8+u+NrtsPbqzIDvKV3vFBhhKXAn2ciisvPDKnPPig=
+  "on": 
+    repo: cioddi/node-bediener
